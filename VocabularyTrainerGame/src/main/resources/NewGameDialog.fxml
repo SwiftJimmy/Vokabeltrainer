@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="htw.GameUi.NewGameDialogController">
+   <children>
+      <GridPane layoutX="22.0" layoutY="97.0" prefHeight="207.0" prefWidth="556.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="198.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="406.0" minWidth="10.0" prefWidth="356.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="29.0" prefWidth="237.0" text="Ausgangssprache" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="237.0" text="Übersetzung in" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="237.0" text="Vokabel-Liste" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="vocabListDropdown" onAction="#vocabularyListSelected" prefHeight="27.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="languageFromDropdown" onAction="#languageFromSelected" prefHeight="27.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="languageToDropdown" prefHeight="27.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="29.0" prefWidth="231.0" text="Gegenspieler">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="player2Dropdown" prefHeight="27.0" prefWidth="402.0" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label layoutX="160.0" layoutY="23.0" prefHeight="29.0" prefWidth="280.0" text="Erstellen Sie ein neues Spiel" textAlignment="JUSTIFY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="startGameButton" layoutX="486.0" layoutY="345.0" mnemonicParsing="false" onAction="#startGameButton_OnClick" prefHeight="29.0" prefWidth="92.0" text="Start" />
+      <Button fx:id="cancelGameButton" layoutX="368.0" layoutY="345.0" mnemonicParsing="false" onAction="#cancelGameButton_OnClick" prefHeight="29.0" prefWidth="92.0" text="Abbrechen" />
+      <Button fx:id="updateButton" disable="true" layoutX="542.0" layoutY="23.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="36.0" />
+   </children>
+</AnchorPane>

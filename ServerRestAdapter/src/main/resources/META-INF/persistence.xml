@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<persistence version="2.1"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+	<persistence-unit transaction-type="RESOURCE_LOCAL"
+		name="managerMysql">
+
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+				
+		<class>htw.GameManagmentInter.Game</class>
+		<class>htw.GameManagmentInter.Answer</class>
+		<class>htw.GameManagmentInter.Round</class>
+		<class>htw.GameManagmentInter.QuizQuestion</class>
+		<class>htw.PlayerManagementInter.Player</class>
+		<class>htw.PlayerManagementInter.Score</class>
+		<class>htw.VocabularyManagmentInter.VocabularyList</class>
+		<class>htw.VocabularyManagmentInter.Vocabulary</class>
+		<class>htw.VocabularyManagmentInter.Word</class>
+	
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://db.f4.htw-berlin.de:3306/_kempa__kbagruppe_2" />
+			<property name="javax.persistence.jdbc.user" value="kempa" />
+			<property name="javax.persistence.jdbc.password" value="kempa_demo" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!-- clean, update, clean-drop -->
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="htw.GameUi.GameController">
+   <children>
+      <Button fx:id="btn_AddGame" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClick_AddGame" prefHeight="44.0" prefWidth="98.0" text="+">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_DeleteGame" layoutX="115.0" layoutY="23.0" mnemonicParsing="false" onAction="#onClick_DeleteGame" prefHeight="44.0" prefWidth="98.0" text="-">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="list_ActiveGame" layoutX="14.0" layoutY="72.0" onMouseClicked="#gameSelected" prefHeight="551.0" prefWidth="199.0" stylesheets="@list.css" />
+      <ComboBox fx:id="cb_ChoosePlayer" layoutX="722.0" layoutY="26.0" onAction="#onSelectPlayer" prefHeight="39.0" prefWidth="174.0" promptText="Choose Player" />
+      <Pane fx:id="roundOtherPlayer_Pane" layoutX="272.0" layoutY="116.0" prefHeight="464.0" prefWidth="587.0">
+         <children>
+            <Label fx:id="roundOtherPlayer_Label" alignment="CENTER" layoutY="64.0" prefHeight="50.0" prefWidth="587.0" text="Erstelle oder wähle ein Spiel." textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TableView fx:id="resultTable" layoutX="58.0" layoutY="157.0" prefHeight="150.0" prefWidth="472.0" visible="false">
+              <columns>
+                <TableColumn fx:id="roundColumn" minWidth="39.0" prefWidth="47.0" text="Runde" />
+                  <TableColumn fx:id="questColumn" prefWidth="121.0" text="Fragewort" />
+                <TableColumn fx:id="player1Column" minWidth="155.0" prefWidth="173.0" text="Spieler1">
+                     <columns>
+                        <TableColumn fx:id="answerColumnPlayer1" text="Antwort" />
+                        <TableColumn fx:id="resultColumnPlayer1" prefWidth="70.0" text="Resultat" />
+                     </columns></TableColumn>
+                  <TableColumn fx:id="player2Column" minWidth="60.0" prefWidth="170.0" resizable="false" text="Spieler2">
+                     <columns>
+                        <TableColumn fx:id="answerColumnPlayer2" minWidth="8.0" prefWidth="74.0" text="Antwort" />
+                        <TableColumn fx:id="resultColumnPlayer2" minWidth="7.0" prefWidth="76.0" text="Resultat" />
+                     </columns></TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="questionPane" layoutX="235.0" layoutY="87.0" prefHeight="522.0" prefWidth="661.0" visible="false">
+         <children>
+            <GridPane layoutX="78.0" layoutY="216.0" prefHeight="220.0" prefWidth="506.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btn_Answer1" mnemonicParsing="false" onAction="#onClick_Answer" prefHeight="105.0" prefWidth="268.0" text="Answer 1" textFill="#298c22">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_Answer3" mnemonicParsing="false" onAction="#onClick_Answer" prefHeight="126.0" prefWidth="248.0" text="Answer 3" textFill="RED" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_Answer2" mnemonicParsing="false" onAction="#onClick_Answer" prefHeight="120.0" prefWidth="248.0" text="Answer 2" textFill="#8e20c9" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btn_Answer4" mnemonicParsing="false" onAction="#onClick_Answer" prefHeight="132.0" prefWidth="246.0" text="Answer 4" textFill="#e5a72c" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <Label fx:id="question_Label" alignment="CENTER" layoutX="78.0" layoutY="80.0" prefHeight="44.0" prefWidth="506.0" text="Question" textAlignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="481.0" layoutY="22.0" prefHeight="17.0" prefWidth="48.0" text="Frage:" />
+            <Label fx:id="roundNumber" layoutX="529.0" layoutY="22.0" prefHeight="17.0" prefWidth="36.0" text="1" />
+         </children>
+      </Pane>
+      <Button fx:id="updateButton" layoutX="859.0" layoutY="580.0" mnemonicParsing="false" onAction="#updateGameView" prefHeight="39.0" prefWidth="36.0" />
+      <Label fx:id="informationLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="341.0" layoutY="580.0" prefHeight="39.0" prefWidth="506.0" text="Das Spiel wird geladen" textAlignment="RIGHT" visible="false" />
+   </children>
+</Pane>

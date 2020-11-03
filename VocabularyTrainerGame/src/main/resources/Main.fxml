@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="697.0" prefWidth="968.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="htw.GameUi.MainController">
+   <tabs>
+      <Tab fx:id="tab_Player" closable="false" onSelectionChanged="#onPlayerSelect" text="Player">
+         <content>
+            <Pane fx:id="playerPane" prefHeight="534.0" prefWidth="732.0" />
+         </content>
+      </Tab>
+      <Tab fx:id="tab_Game" closable="false" onSelectionChanged="#gameSelected" text="Game">
+         <content>
+            <Pane fx:id="gamePane" prefHeight="620.0" prefWidth="857.0" />
+         </content>
+      </Tab>
+      <Tab fx:id="tab_Vocabulary" closable="false" onSelectionChanged="#onVocabSelected" text="Vocabulary">
+         <content>
+            <Pane fx:id="vocabPane" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
