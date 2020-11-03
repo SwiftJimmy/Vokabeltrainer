@@ -1,6 +1,8 @@
 # Vokabeltrainer
 
-In dieser Arbeit wurde ein Vocabeltrainer programmiert, welcher auf Grundlage einer komponentenbasierten Server Client Architektur in Java realisiert wurde. Der Aufbau wird detailiert in der doku.pdf Datei beschreiben. Die Vokabellisten können im Format des gnuVocabTrain (https://de.wikipedia.org/wiki/GnuVocabTrain) eingelesen werden. Das Spielprinzip ähnelt der App Quizduell (siehe https://de.wikipedia.org/wiki/Quizduell). Die folgenden Absätze geben einen groben Überplick über die Applikationsarchitektur.
+In dieser Arbeit wurde ein Vocabeltrainer programmiert, welcher auf Grundlage einer komponentenbasierten Server Client Architektur in Java realisiert wurde. Der Aufbau wird detailiert in der doku.pdf Datei beschreiben. Die Vokabellisten können im Format des gnuVocabTrain (https://de.wikipedia.org/wiki/GnuVocabTrain) eingelesen werden. Das Spielprinzip ähnelt der App Quizduell (siehe https://de.wikipedia.org/wiki/Quizduell).
+
+Die folgenden Absätze geben einen groben Überplick über die Applikationsarchitektur.
 
 ## Table of Contents 
 
