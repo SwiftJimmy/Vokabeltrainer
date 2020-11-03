@@ -2,16 +2,15 @@
 
 ##### Table of Contents 
 
-[Start](#Start)
+- [Start](#Start)
 
-[Komponentenschnitt](#Komponentenschnitt)
+- [Komponentenschnitt](#Komponentenschnitt)
 
-[Konzeptionelles Datenmodell](#Datenmodell)
+- [Konzeptionelles Datenmodell](#Datenmodell)
 
-[Präsentationsschicht](#Präsentationsschicht)  
+- [Präsentationsschicht](#Präsentationsschicht)  
 
-[Frameworks](#Frameworks) 
-
+- [Frameworks](#Frameworks) 
 
 
 <a name="Start"/>
