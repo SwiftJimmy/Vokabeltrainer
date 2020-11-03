@@ -1,5 +1,7 @@
 # Vokabeltrainer
 
+In dieser Arbeit wurde ein Vocabeltrainer programmiert, welcher auf Grundlage einer komponentenbasierten Server Client Architektur in Java realisiert wurde. Der Aufbau wird detailiert in der doku.pdf Datei beschreiben. Die Vokabellisten können im Format des gnuVocabTrain (https://de.wikipedia.org/wiki/GnuVocabTrain) eingelesen werden. Das Spielprinzip ähnelt der App Quizduell (siehe https://de.wikipedia.org/wiki/Quizduell). Die folgenden Absätze geben einen groben Überplick über die Applikationsarchitektur.
+
 ## Table of Contents 
 
 - [Start](#Start)
@@ -16,12 +18,11 @@
 <a name="Start"/>
 
 ## Start
-
-In dieser Arbeit wurde ein Vocabeltrainer programmiert, welcher auf Grundlage einer komponentenbasierten Server Client Architektur in Java realisiert wurde. Der Aufbau wird detailiert in der doku.pdf Datei beschreiben. Die folgenden Absätze geben einen groben Überplick über die Applikationsarchitektur.
-
 Um das Projekt zu zu starten, muss in der ServerRestAdapter Komponente eine gewünschte MySQL DB in der Datein ServerRestAdapter/src/main/resources/META-INF/persistence.xml hinterlegt werden. 
 
-Im Anschluss muss erst die ServerRestAdapter Komponente und im Anschluss die VocabularyTrainerGame Komponente gestartet werden (z.b. in Eclipse). 
+Im Anschluss muss erst die ServerRestAdapter Komponente und im Anschluss die VocabularyTrainerGame Komponente gestartet werden (z.b. in Eclipse).
+
+In dem Ordner src/vocabulary befindet sich eine Vokabelliste, welche eingelesen werden kann.
 
 <a name="Komponentenschnitt"/>
 
