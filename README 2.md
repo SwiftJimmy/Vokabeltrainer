@@ -1,15 +1,23 @@
 # Vokabeltrainer
 
 ##### Table of Contents 
+
 [Start](#Start)
+
 [Komponentenschnitt](#Komponentenschnitt)
+
 [Konzeptionelles Datenmodell](#Datenmodell)
+
 [Präsentationsschicht](#Präsentationsschicht)  
+
 [Frameworks](#Frameworks) 
 
 
+
 <a name="Start"/>
+
 ## Start
+
 In dieser Arbeit wurde ein Vocabeltrainer programmiert, welcher auf Grundlage einer komponentenbasierten Server Client Architektur in Java realisiert wurde. Der Aufbau wird detailiert in der doku.pdf Datei beschreiben. Die folgenden Absätze geben einen groben Überplick über die Applikationsarchitektur.
 
 Um das Projekt zu zu starten, muss in der ServerRestAdapter Komponente eine gewünschte MySql DB in der Datein ServerRestAdapter/src/main/resources/META-INF/persistence.xml hinterlegt werden. 
@@ -17,6 +25,7 @@ Um das Projekt zu zu starten, muss in der ServerRestAdapter Komponente eine gew�
 Im Anschluss muss erst die ServerRestAdapter Komponente und im Anschluss die VocabularyTrainerGame Komponente gestartet werden (z.b. in Eclipse). 
 
 <a name="Komponentenschnitt"/>
+
 ## Komponentenschnitt
 In diesem Kapitel werden die Komponenten des Informationssystems sowie deren Schnittstellenkommunikation anhand des in Abbildung 1 dargestellten Komponentendiagramms vorgestellt. 
 
@@ -35,6 +44,7 @@ Die PlayerClient_Adapter-, GameClient_Adapter- und VocabularyClient_Adapter Komp
 Der Datenfluss zwischen ServerRestAdapter und ClientRestAdapter wird durch eine HTTP REST-Schnittstelle realisiert.
 
 <a name="Datenmodell"/>
+
 ## Konzeptionelles Datenmodell
 Wie in Abbildung 2 dargestellt, besteht das Datenmodell aus insgesamt neun Klassen. Die Persistenz des Datenmodells wurde in diesem Projekt mithilfe der Java-Persistence-Api (JPA) durch den JPA-Provider Hibernate in einer MySQL Datenbank realisiert.  
 
@@ -50,7 +60,8 @@ Die Datenhoheit über die Klassen ist wie folgt auf die Komponenten aufgeteilt:
 | PlayerManagement:    | Player, Score     |  
 | VocabularyManagement:    | VocabularyList, Vocabulary, Word     | 
 		
-<a name="Präsentationsschicht"/>    
+<a name="Präsentationsschicht"/> 
+
 ## Präsentationsschicht
 In diesem Kapitel wird der Aufbau und die Funktionsweise der Präsentationsschicht beschrieben. In dieser Arbeit wurde die Präsentationsschicht in Form einer JavaFX Gui erstellt. Dafür wurden mithilfe des JavaFX Scene Builder  Oberflächen (Panes) erstellt und als fxml Dateien gespeichert. 
 
@@ -302,6 +313,7 @@ Durch einen Klick auf den Uploadbutton öffnet sich ein FileChooser Fenster. Dad
 Wie bereits bei den anderen Panes beschrieben, befindet sich auch auf der VocabPane im unteren rechten Bereich ein Aktualisierungsbutton  . Durch einen Klick auf den Button wird die VocabPane mithilfe der getAllVocabularyLists Servicemethode aktualisiert. Weiterhin dient dieser Button auch hier als Indikator für Hintergrundaktivitäten.
 
 <a name="Frameworks"/>
+
 ## Frameworks
 In diesem Kapitel werden die in dem Projekt verwendeten Frameworks beschrieben. Um einen Überblick über die verwendeten Frameworks zu erhalten, werden diese, repräsentiert durch ihr Logo, in Abbildung 13 verteilt auf die einzelnen Maven Projekte dargestellt. 
 
